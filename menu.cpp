@@ -116,18 +116,14 @@ int main() {
                 getch();
                 break;
                 } 
-  case '5':
-    /* code */
-    break;
-  
-  default:
-    system("cls");
-    cout<<"Pilihan Tidak Tersedia";
-    getch();
-    break;
-  }
-
-
-} while (pl!='5');
-  return 0;
+ case '5':
+                break;
+            default:
+                system("cls");
+                cout << "Pilihan Tidak Tersedia";
+                getch();
+                break;
+        }
+    } while (pl != '5');
+ return 0;
 }
