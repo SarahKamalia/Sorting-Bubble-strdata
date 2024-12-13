@@ -40,6 +40,17 @@ void tampilkanData(int data[], int n) {
         }
 }
 
+void sortingAscending(int data[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (data[j] > data[j + 1]) {
+                tukar(&data[j], &data[j + 1]);
+            }
+        }
+    }
+    cout << "Data berhasil diurutkan secara ascending!";
+}
+
 int main() {
     int data[100];
     char pl;
@@ -73,9 +84,16 @@ int main() {
                 break;
                 } 
     break;  
-   case '3':
-    mPertama("ke- tiga");
-    /* code */
+   case '3': {
+                system("cls");
+                if (n > 0) {
+                    sortingAscending(data, n);
+                } else {
+                    cout << "Data kosong. Masukkan data terlebih dahulu!";
+                }
+                getch();
+                break;
+                }
     break;  
    case '4':
     mPertama("ke- empat");
